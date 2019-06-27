@@ -25,7 +25,7 @@ export default class Table extends Component {
   renderItems() {
     return (
       this.state.items.map((item) =>
-        <tr key={item.id}>
+        <tr key={item.id} className={item.marcado? 'marked' : ''}>
           <td>{item.id}</td>
           <td>{item.nombre}</td>
           <td>{item.jefatura}</td>
@@ -36,7 +36,7 @@ export default class Table extends Component {
 
   render() {
     return (
-      <table>
+      <table className='table'>
         <thead>
           <tr>
             <th>ID</th>
